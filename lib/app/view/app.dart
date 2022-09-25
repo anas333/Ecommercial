@@ -8,7 +8,7 @@ import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class App extends StatefulWidget {
+class App extends StatelessWidget {
   const App({
     Key? key,
     required AuthenticationRepository authenticationRepository,
@@ -21,42 +21,26 @@ class App extends StatefulWidget {
   final CloudFirestore _cloudFirestore;
 
   @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    precacheImage(const AssetImage('assets/assets/imgs/fabric2.jpg'), context);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider<AuthenticationRepository>.value(
-          value: widget._authenticationRepository,
+          value: _authenticationRepository,
         ),
         RepositoryProvider<CloudFirestore>.value(
-          value: widget._cloudFirestore,
+          value: _cloudFirestore,
         ),
       ],
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
             create: (context) => DatabaseBloc(
-              cloudFirestore: widget._cloudFirestore,
+              cloudFirestore: _cloudFirestore,
             ),
           ),
           BlocProvider(
             create: (context) => AppBloc(
-              authenticationRepository: widget._authenticationRepository,
+              authenticationRepository: _authenticationRepository,
             ),
           ),
         ],

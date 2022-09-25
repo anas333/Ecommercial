@@ -59,13 +59,10 @@ class DetailScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(
                           top: 40,
                         ),
-                        child: Hero(
-                          tag: shirts.shirtImg,
-                          child: Image.network(
-                            shirts.shirtImg,
-                            fit: BoxFit.fill,
-                            height: size.height * (0.45),
-                          ),
+                        child: Image.network(
+                          shirts.shirtImg,
+                          fit: BoxFit.fill,
+                          height: size.height * (0.45),
                         ),
                       ),
                     ),
@@ -224,10 +221,6 @@ class DetailScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
                             image: AssetImage('assets/assets/imgs/fabric2.jpg'),
-                            colorFilter: ColorFilter.mode(
-                              Color.fromARGB(255, 42, 104, 119),
-                              BlendMode.multiply,
-                            ),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -273,10 +266,6 @@ class DetailScreen extends StatelessWidget {
                                         image: AssetImage(
                                           'assets/assets/imgs/fabric2.jpg',
                                         ),
-                                        colorFilter: ColorFilter.mode(
-                                          Color.fromARGB(255, 42, 104, 119),
-                                          BlendMode.multiply,
-                                        ),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -313,10 +302,6 @@ class DetailScreen extends StatelessWidget {
                                       image: const DecorationImage(
                                         image: AssetImage(
                                           'assets/assets/imgs/fabric2.jpg',
-                                        ),
-                                        colorFilter: ColorFilter.mode(
-                                          Color.fromARGB(255, 42, 104, 119),
-                                          BlendMode.multiply,
                                         ),
                                         fit: BoxFit.fill,
                                       ),

@@ -61,13 +61,10 @@ class MyshirtItem extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 30),
-                            child: Hero(
-                              tag: shirt[index].shirtImg,
-                              child: Image.network(
-                                shirt[index].shirtImg,
-                                height: size.height * (0.19),
-                                fit: BoxFit.cover,
-                              ),
+                            child: Image.network(
+                              shirt[index].shirtImg,
+                              height: size.height * (0.19),
+                              fit: BoxFit.cover,
                             ),
                           ),
                           Positioned(

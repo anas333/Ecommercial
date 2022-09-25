@@ -21,10 +21,6 @@ class NavView extends StatelessWidget {
               ),
               image: DecorationImage(
                 image: AssetImage('assets/assets/imgs/fabric2.jpg'),
-                colorFilter: ColorFilter.mode(
-                  Color.fromARGB(255, 42, 104, 119),
-                  BlendMode.multiply,
-                ),
                 fit: BoxFit.fill,
               ),
             ),
